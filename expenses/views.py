@@ -109,3 +109,13 @@ def expense_edit(request, id):
 
         messages.info(request, 'Editing expense, please wait')
         return render(request, 'expenses/edit-expense.html', context)
+
+
+@login_required(login_url='/accounts/login')
+def delete_expense(request, id):
+    expense = Expense.objects.get(pk=id)
+    if request.method == 'POST':
+        expense.delete()
+        messages.success(request, 'Expense deleted successfully')
+        return redirect('expenses')
+    return render(request, 'expenses/delete-expense.html')

@@ -36,7 +36,7 @@
                     <input type="date" class="form-control form-control-sm mb-3" name="expense_date" value="{{values.date | date:'Y-m-d'}}">
                 </div>
                 <input type="submit" value="Edit" class="btn btn-outline-primary btn-sm mr-2">
-                <a href="" class="btn btn-outline-danger btn-sm">Remove</a>
+                <a href="{% url 'delete-expense' expense.id %}" class="btn btn-outline-danger btn-sm">Remove</a>
                 <a href="{% url 'expenses' %}" class="btn btn-outline-info btn-sm align-right float-right mr-auto">Back to Expenses</a>
             </form>
         </div>
