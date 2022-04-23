@@ -11,7 +11,7 @@
 
 <h2>My Salaries</h2>
 <div class="row">
-    <div class="col-md-10">
+    <div class="col-md-4">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{% url 'salary' %}">Salaries</a></li>
@@ -19,8 +19,13 @@
             </ol>
         </nav>
     </div>
-    <div class="col-md-2">
-        <a href="{% url 'add-salary' %}" class="btn btn-outline-primary btn-sm mb-3">Add Salary</a>
+    <div class="col-md-4">
+        <div class="form-group">
+            <input type="text" class="form-control mb-3" id="searchField" placeholder="Search Salary">
+        </div>
+    </div>
+    <div class="col-md-4">
+        <a href="{% url 'add-salary' %}" class="btn btn-outline-primary btn-sm mb-3 float-end">Add Salary</a>
     </div>
 </div>
 
@@ -42,7 +47,7 @@
                 <td>{{salary.description}}</td>
                 <td>{{salary.source}}</td>
                 <td>{{salary.date}}</td>
-                <td><a href="{% url 'salary-edit' salary.id %}" class="btn btn-secondary btn-sm">Edit</a></td>
+                <td><a href="{% url 'salary-edit' salary.id %}" class="btn btn-outline-secondary btn-sm">Edit</a></td>
             </tr>
             {% endfor %}
         </tbody>
