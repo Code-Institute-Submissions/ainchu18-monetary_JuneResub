@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container mt-4">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'saving' %}">Savings</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Add Savings</li>
+        </ol>
+    </nav>
+    <div class="card">
+
+        <div class="card-body">
+            <form action="{% url 'add-saving' %}" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="" class="mb-3">Amount</label>
+                    <input type="number" class="form-control form-control-sm mb-3" name="amount" value="{{values.amount}}">
+                </div>
+                <div class="form-group">
+                    <label for="" class="mb-3">Sources</label>
+                    <select class="form-control form-control-sm mb-3" name="source">
+                        {% for source in sources %}
+                        <option name="source" value="{{source.name}}">{{source.name}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="" class="mb-3">Description</label>
+                    <input type="text" class="form-control form-control-sm mb-3" name="description"
+                        value="{{values.description}}">
+                </div>
+                <div class="form-group">
+                    <label for="" class="mb-3">Date of Savings</label>
+                    <input type="date" class="form-control form-control-sm mb-3" name="saving_date">
+                </div>
+                <a href="{% url 'saving' %}" class="btn btn-outline-primary btn-sm">Back</a>
+                <input type="submit" value="Save" class="btn btn-primary btn-sm">
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
