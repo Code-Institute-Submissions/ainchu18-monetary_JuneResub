@@ -42,7 +42,7 @@
                 <td>{{saving.description}}</td>
                 <td>{{saving.source}}</td>
                 <td>{{saving.date}}</td>
-                <td><a href="" class="btn btn-secondary btn-sm">Edit</a></td>
+                <td><a href="{% url 'saving-edit' saving.id %}" class="btn btn-secondary btn-sm">Edit</a></td>
             </tr>
             {% endfor %}
         </tbody>

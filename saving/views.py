@@ -61,3 +61,61 @@ def add_saving(request):
                                date=date, source=source, description=description)
         messages.success(request, 'Savings saved successfully')
         return redirect('saving')
+
+
+@login_required(login_url='/accounts/login')
+def saving_edit(request, id):
+    saving = Saving.objects.get(pk=id)
+    sources = Source.objects.all()
+    context = {
+        'saving': saving,
+        'values': saving,
+        'sources': sources
+    }
+    if request.method == 'GET':
+        return render(request, 'saving/edit-saving.html', context)
+
+    if request.method == 'POST':
+        amount = request.POST['amount']
+
+        if not amount:
+            messages.error(request, 'Amount is required')
+            return render(request, 'saving/edit-saving.html', context)
+        description = request.POST['description']
+        date = request.POST['saving_date']
+        source = request.POST['source']
+
+        if not description:
+            messages.error(request, 'Description is required')
+            return render(request, 'saving/add_saving.html', context)
+
+        if not date:
+            messages.error(request, 'Savings date is required')
+            return render(request, 'saving/add_saving.html', context)
+
+        if not source:
+            messages.error(request, 'Source is required')
+            return render(request, 'saving/add_saving.html', context)
+
+        saving.amount = amount
+        saving.date = date
+        saving.source = source
+        saving.description = description
+
+        saving.save()
+
+        messages.success(request, 'Savings updated successfully')
+        return redirect('saving')
+
+        messages.info(request, 'Editing savings, please wait')
+        return render(request, 'saving/edit-saving.html', context)
+
+
+@login_required(login_url='/accounts/login')
+def delete_saving(request, id):
+    saving = Saving.objects.get(pk=id)
+    if request.method == 'POST':
+        saving.delete()
+        messages.success(request, 'Savings deleted successfully')
+        return redirect('saving')
+    return render(request, 'saving/delete-saving.html')
