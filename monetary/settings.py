@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'expenses',
     'salary',
+    'saving',
 ]
 
 MIDDLEWARE = [

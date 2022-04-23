@@ -9,18 +9,18 @@
     </div>
 </div>
 
-<h2>My Salaries</h2>
+<h2>My Savings</h2>
 <div class="row">
     <div class="col-md-10">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{% url 'salary' %}">Salaries</a></li>
-                <li class="breadcrumb-item active" aria-current="page">My Salaries</li>
+                <li class="breadcrumb-item"><a href="{% url 'salary' %}">Savings</a></li>
+                <li class="breadcrumb-item active" aria-current="page">My Savings</li>
             </ol>
         </nav>
     </div>
     <div class="col-md-2">
-        <a href="{% url 'add-salary' %}" class="btn btn-outline-primary btn-sm mb-3">Add Salary</a>
+        <a href="" class="btn btn-outline-primary btn-sm mb-3">Add Saving</a>
     </div>
 </div>
 
@@ -31,18 +31,18 @@
                 <th>Amount</th>
                 <th>Description</th>
                 <th>Source</th>
-                <th>Salary Date</th>
+                <th>Savings Date</th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
-            {% for salary in page_obj %}
+            {% for saving in page_obj %}
             <tr>
-                <td>{{salary.amount}}</td>
-                <td>{{salary.description}}</td>
-                <td>{{salary.source}}</td>
-                <td>{{salary.date}}</td>
-                <td><a href="{% url 'salary-edit' salary.id %}" class="btn btn-secondary btn-sm">Edit</a></td>
+                <td>{{saving.amount}}</td>
+                <td>{{saving.description}}</td>
+                <td>{{saving.source}}</td>
+                <td>{{saving.date}}</td>
+                <td><a href="" class="btn btn-secondary btn-sm">Edit</a></td>
             </tr>
             {% endfor %}
         </tbody>

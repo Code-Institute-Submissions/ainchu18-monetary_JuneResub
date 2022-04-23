@@ -10,6 +10,7 @@ import datetime
 import csv
 
 
+@login_required(login_url='/accounts/login')
 def index(request):
     sources = Source.objects.all()
     salary = Salary.objects.filter(owner=request.user)
@@ -24,6 +25,7 @@ def index(request):
     return render(request, 'salary/index.html', context)
 
 
+@login_required(login_url='/accounts/login')
 def add_salary(request):
     sources = Source.objects.all()
     context = {
@@ -61,6 +63,7 @@ def add_salary(request):
         return redirect('salary')
 
 
+@login_required(login_url='/accounts/login')
 def salary_edit(request, id):
     sources = Source.objects.all()
     salary = Salary.objects.get(pk=id)
@@ -108,7 +111,7 @@ def salary_edit(request, id):
         return render(request, 'salary/edit-salary.html', context)
 
 
-
+@login_required(login_url='/accounts/login')
 def delete_salary(request, id):
     salary = Salary.objects.get(pk=id)
     if request.method == 'POST':
