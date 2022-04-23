@@ -120,3 +120,15 @@ def delete_salary(request, id):
         return redirect('salary')
     return render(request, 'salary/delete-salary.html')
 
+
+def search_salary(request):
+    if request.method == 'POST':
+        search_str = json.loads(request.body).get('searchText')
+
+        salaries = Salary.objects.filter(
+            amount__istartswith=search_str, owner=request.user) | Salary.objects.filter(
+            date__istartswith=search_str, owner=request.user) | Salary.objects.filter(
+            description__icontains=search_str, owner=request.user) | Salary.objects.filter(
+            source__icontains=search_str, owner=request.user)
+        data = salaries.values()
+        return JsonResponse(list(data), safe=False)

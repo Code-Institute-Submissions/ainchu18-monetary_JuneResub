@@ -103,5 +103,6 @@
 {% endblock %}
 
 {% block postload_js %}
+{{ block.super }}
 <script src="{% static 'expenses/js/searchExpense.js' %}"></script>
 {% endblock %}
