@@ -7,8 +7,8 @@
         <div class="col-md-10">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="">Expenses</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">My Expenses</li>
+                    <li class="breadcrumb-item"><a href="">Salary</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">My Salaries</li>
                 </ol>
             </nav>
         </div>
@@ -18,7 +18,7 @@
             {% csrf_token %}
             <h1>Are you sure you want to delete this?</h1><br>
             <input type="submit" value="Yes" class="btn btn-outline-danger btn-sm">
-            <a href="{% url 'expenses' %}">
+            <a href="{% url 'salary' %}">
                 <div class="btn btn-outline-primary btn-sm">No</div>
             </a>
         </form>

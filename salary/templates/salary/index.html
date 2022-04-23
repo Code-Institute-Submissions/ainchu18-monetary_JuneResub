@@ -14,7 +14,7 @@
     <div class="col-md-10">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="">Salaries</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'salary' %}">Salaries</a></li>
                 <li class="breadcrumb-item active" aria-current="page">My Salaries</li>
             </ol>
         </nav>
@@ -42,7 +42,7 @@
                 <td>{{salary.description}}</td>
                 <td>{{salary.category}}</td>
                 <td>{{salary.date}}</td>
-                <td><a href="" class="btn btn-secondary btn-sm">Edit</a></td>
+                <td><a href="{% url 'salary-edit' salary.id %}" class="btn btn-secondary btn-sm">Edit</a></td>
             </tr>
             {% endfor %}
         </tbody>

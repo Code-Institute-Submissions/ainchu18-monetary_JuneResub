@@ -59,3 +59,61 @@ def add_salary(request):
                                date=date, source=source, description=description)
         messages.success(request, 'Salary saved successfully')
         return redirect('salary')
+
+
+def salary_edit(request, id):
+    sources = Source.objects.all()
+    salary = Salary.objects.get(pk=id)
+    context = {
+        'salary': salary,
+        'values': salary,
+        'sources': sources
+    }
+    if request.method == 'GET':
+        return render(request, 'salary/edit-salary.html', context)
+
+    if request.method == 'POST':
+        amount = request.POST['amount']
+
+        if not amount:
+            messages.error(request, 'Amount is required')
+            return render(request, 'salary/edit-salary.html', context)
+        description = request.POST['description']
+        date = request.POST['salary_date']
+        source = request.POST['source']
+
+        if not description:
+            messages.error(request, 'Description is required')
+            return render(request, 'salary/add_salary.html', context)
+
+        if not date:
+            messages.error(request, 'Salary date is required')
+            return render(request, 'salary/add_salary.html', context)
+
+        if not source:
+            messages.error(request, 'Source is required')
+            return render(request, 'salary/add_salary.html', context)
+
+        salary.amount = amount
+        salary.date = date
+        salary.source = source
+        salary.description = description
+
+        salary.save()
+
+        messages.success(request, 'Salary updated successfully')
+        return redirect('salary')
+
+        messages.info(request, 'Editing salary, please wait')
+        return render(request, 'salary/edit-salary.html', context)
+
+
+
+def delete_salary(request, id):
+    salary = Salary.objects.get(pk=id)
+    if request.method == 'POST':
+        salary.delete()
+        messages.success(request, 'Salary deleted successfully')
+        return redirect('salary')
+    return render(request, 'salary/delete-salary.html')
+

@@ -40,12 +40,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'salary',
 
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'expenses',
+    'salary',
 ]
 
 MIDDLEWARE = [
