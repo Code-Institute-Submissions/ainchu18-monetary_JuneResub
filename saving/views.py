@@ -119,3 +119,16 @@ def delete_saving(request, id):
         messages.success(request, 'Savings deleted successfully')
         return redirect('saving')
     return render(request, 'saving/delete-saving.html')
+
+
+def search_saving(request):
+    if request.method == 'POST':
+        search_str = json.loads(request.body).get('searchText')
+
+        savings = Saving.objects.filter(
+            amount__istartswith=search_str, owner=request.user) | Saving.objects.filter(
+            date__istartswith=search_str, owner=request.user) | Saving.objects.filter(
+            description__icontains=search_str, owner=request.user) | Saving.objects.filter(
+            source__icontains=search_str, owner=request.user)
+        data = savings.values()
+        return JsonResponse(list(data), safe=False)
