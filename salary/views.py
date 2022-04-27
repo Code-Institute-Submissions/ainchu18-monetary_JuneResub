@@ -121,6 +121,7 @@ def delete_salary(request, id):
     return render(request, 'salary/delete-salary.html')
 
 
+@login_required(login_url='/accounts/login')
 def search_salary(request):
     if request.method == 'POST':
         search_str = json.loads(request.body).get('searchText')
@@ -134,6 +135,7 @@ def search_salary(request):
         return JsonResponse(list(data), safe=False)
 
 
+@login_required(login_url='/accounts/login')
 def salary_csv(request):
 
     response = HttpResponse(content_type='text/csv')
@@ -150,10 +152,13 @@ def salary_csv(request):
     return response
 
 
+@login_required(login_url='/accounts/login')
 def salary_stats_view(request):
     return render(request, 'salary/salary-stat.html')
 
 
+
+@login_required(login_url='/accounts/login')
 def salary_summary(request):
     current_date = datetime.date.today()
     three_months_ago = current_date-datetime.timedelta(days=30*3)

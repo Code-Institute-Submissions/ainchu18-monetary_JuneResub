@@ -121,6 +121,7 @@ def delete_saving(request, id):
     return render(request, 'saving/delete-saving.html')
 
 
+@login_required(login_url='/accounts/login')
 def search_saving(request):
     if request.method == 'POST':
         search_str = json.loads(request.body).get('searchText')
@@ -134,6 +135,7 @@ def search_saving(request):
         return JsonResponse(list(data), safe=False)
 
 
+@login_required(login_url='/accounts/login')
 def saving_csv(request):
 
     response = HttpResponse(content_type='text/csv')
@@ -150,10 +152,13 @@ def saving_csv(request):
     return response
 
 
+
+@login_required(login_url='/accounts/login')
 def saving_stats_view(request):
     return render(request, 'saving/saving-stat.html')
 
 
+@login_required(login_url='/accounts/login')
 def saving_summary(request):
     current_date = datetime.date.today()
     three_months_ago = current_date-datetime.timedelta(days=30*3)

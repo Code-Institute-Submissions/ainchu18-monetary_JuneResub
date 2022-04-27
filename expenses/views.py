@@ -122,6 +122,7 @@ def delete_expense(request, id):
     return render(request, 'expenses/delete-expense.html')
 
 
+@login_required(login_url='/accounts/login')
 def search_expense(request):
     if request.method == 'POST':
         search_str = json.loads(request.body).get('searchText')
@@ -135,6 +136,7 @@ def search_expense(request):
         return JsonResponse(list(data), safe=False)
 
 
+@login_required(login_url='/accounts/login')
 def export_csv(request):
 
     response = HttpResponse(content_type='text/csv')
@@ -151,10 +153,12 @@ def export_csv(request):
     return response
 
 
+@login_required(login_url='/accounts/login')
 def stats_view(request):
     return render(request, 'expenses/stats.html')
 
 
+@login_required(login_url='/accounts/login')
 def expense_category_summary(request):
     current_date = datetime.date.today()
     three_months_ago = current_date-datetime.timedelta(days=30*3)
