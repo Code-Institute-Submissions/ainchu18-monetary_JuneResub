@@ -26,3 +26,8 @@
 </div>
 
 {% endblock %}
+
+{% block postload_js %}
+{{ block.super }}
+<script src="{% static 'saving/js/savingStat.js' %}"></script>
+{% endblock %}

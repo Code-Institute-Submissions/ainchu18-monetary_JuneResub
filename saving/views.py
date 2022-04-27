@@ -152,3 +152,29 @@ def saving_csv(request):
 
 def saving_stats_view(request):
     return render(request, 'saving/saving-stat.html')
+
+
+def saving_summary(request):
+    current_date = datetime.date.today()
+    three_months_ago = current_date-datetime.timedelta(days=30*3)
+    savings = Saving.objects.filter(owner=request.user, date__gte=three_months_ago, date__lte=current_date)
+    summary = {}
+
+    def get_saving_source(saving):
+        return saving.source
+    source_list = list(set(map(get_saving_source, savings)))
+
+    def get_saving_source_amount(source):
+        amount = 0
+        filtered_by_source = savings.filter(source=source)
+
+        for item in filtered_by_source:
+            amount += item.amount
+
+        return amount
+
+    for x in savings:
+        for y in source_list:
+            summary[y] = get_saving_source_amount(y)
+
+    return JsonResponse({ 'saving_source_data': summary }, safe=False)
