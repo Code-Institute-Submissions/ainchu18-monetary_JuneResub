@@ -132,3 +132,19 @@ def search_salary(request):
             source__icontains=search_str, owner=request.user)
         data = salaries.values()
         return JsonResponse(list(data), safe=False)
+
+
+def salary_csv(request):
+
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename=Salaries' + str(datetime.datetime.now()) + '.csv'
+
+    writer = csv.writer(response)
+    writer.writerow(['Amount', 'Source', 'Description', 'Date'])
+
+    salaries = Salary.objects.filter(owner=request.user)
+
+    for salary in salaries:
+        writer.writerow([salary.amount, salary.source, salary.description, salary.date])
+
+    return response
