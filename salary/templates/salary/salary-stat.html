@@ -9,18 +9,18 @@
         <div class="col-md-10">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{% url 'saving-stats' %}">Savings Summary</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'salary-stats' %}">Salary Summary</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Summary</li>
                 </ol>
             </nav>
         </div>
         <div class="col-md-2">
-            <a href="{% url 'saving' %}" class="btn btn-outline-primary btn-sm">Back</a>
+            <a href="{% url 'salary' %}" class="btn btn-outline-primary btn-sm">Back</a>
         </div>
     </div>
     <div class="row">
         <div class="col">
-            <canvas class="my-4 w-100" id="savingChart" width="900" height="380"></canvas>
+            <canvas class="my-4 w-100" id="salaryChart" width="900" height="380"></canvas>
         </div>
     </div>
 </div>
@@ -29,5 +29,5 @@
 
 {% block postload_js %}
 {{ block.super }}
-<script src="{% static 'js/savingStat.js' %}"></script>
+<script src="{% static 'salary/js/salaryStat.js' %}"></script>
 {% endblock %}
