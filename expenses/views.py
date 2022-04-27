@@ -7,6 +7,7 @@ from django.core.paginator import Paginator
 import json
 from django.http import JsonResponse, HttpResponse
 import datetime
+import csv
 
 
 @login_required(login_url='/accounts/login')
@@ -132,3 +133,19 @@ def search_expense(request):
             category__icontains=search_str, owner=request.user)
         data = expenses.values()
         return JsonResponse(list(data), safe=False)
+
+
+def export_csv(request):
+
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename=Expenses' + str(datetime.datetime.now()) + '.csv'
+
+    writer = csv.writer(response)
+    writer.writerow(['Amount', 'Category', 'Description', 'Date'])
+
+    expenses = Expense.objects.filter(owner=request.user)
+
+    for expense in expenses:
+        writer.writerow([expense.amount, expense.category, expense.description, expense.date])
+
+    return response
