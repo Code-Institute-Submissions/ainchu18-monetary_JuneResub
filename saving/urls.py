@@ -10,5 +10,5 @@ urlpatterns = [
     path('search-saving', csrf_exempt(views.search_saving), name="search_saving"),
     # path('saving-summary', views.saving_summary, name="saving-summary"),
     # path('saving-stats', views.saving_stats_view, name="saving-stats"),
-    # path('saving_csv', views.saving_csv, name="saving-csv")
+    path('saving_csv', views.saving_csv, name="saving-csv"),
 ]

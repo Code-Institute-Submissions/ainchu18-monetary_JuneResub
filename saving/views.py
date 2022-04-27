@@ -132,3 +132,19 @@ def search_saving(request):
             source__icontains=search_str, owner=request.user)
         data = savings.values()
         return JsonResponse(list(data), safe=False)
+
+
+def saving_csv(request):
+
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename=Savings' + str(datetime.datetime.now()) + '.csv'
+
+    writer = csv.writer(response)
+    writer.writerow(['Amount', 'Source', 'Description', 'Date'])
+
+    savings = Saving.objects.filter(owner=request.user)
+
+    for saving in savings:
+        writer.writerow([saving.amount, saving.source, saving.description, saving.date])
+
+    return response
