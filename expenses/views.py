@@ -149,3 +149,7 @@ def export_csv(request):
         writer.writerow([expense.amount, expense.category, expense.description, expense.date])
 
     return response
+
+
+def stats_view(request):
+    return render(request, 'expenses/stats.html')
