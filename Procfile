@@ -1,1 +1,1 @@
-web: gunicorn monetary.wsgi:application
+web: gunicorn monetary.wsgi
