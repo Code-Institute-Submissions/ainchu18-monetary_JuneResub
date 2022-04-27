@@ -148,3 +148,7 @@ def saving_csv(request):
         writer.writerow([saving.amount, saving.source, saving.description, saving.date])
 
     return response
+
+
+def saving_stats_view(request):
+    return render(request, 'saving/saving-stat.html')
