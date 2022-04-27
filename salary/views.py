@@ -152,3 +152,29 @@ def salary_csv(request):
 
 def salary_stats_view(request):
     return render(request, 'salary/salary-stat.html')
+
+
+def salary_summary(request):
+    current_date = datetime.date.today()
+    three_months_ago = current_date-datetime.timedelta(days=30*3)
+    salaries = Salary.objects.filter(owner=request.user, date__gte=three_months_ago, date__lte=current_date)
+    summary = {}
+
+    def get_salary_source(salary):
+        return salary.source
+    source_list = list(set(map(get_salary_source, salaries)))
+
+    def get_salary_source_amount(source):
+        amount = 0
+        filtered_by_source = salaries.filter(source=source)
+
+        for item in filtered_by_source:
+            amount += item.amount
+
+        return amount
+
+    for x in salaries:
+        for y in source_list:
+            summary[y] = get_salary_source_amount(y)
+
+    return JsonResponse({ 'salary_source_data': summary }, safe=False)
