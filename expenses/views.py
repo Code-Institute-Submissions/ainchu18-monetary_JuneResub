@@ -153,3 +153,29 @@ def export_csv(request):
 
 def stats_view(request):
     return render(request, 'expenses/stats.html')
+
+
+def expense_category_summary(request):
+    current_date = datetime.date.today()
+    three_months_ago = current_date-datetime.timedelta(days=30*3)
+    expenses = Expense.objects.filter(owner=request.user, date__gte=three_months_ago, date__lte=current_date)
+    summary = {}
+
+    def get_expense_category(expense):
+        return expense.category
+    category_list = list(set(map(get_expense_category, expenses)))
+
+    def get_expense_category_amount(category):
+        amount = 0
+        filtered_by_category = expenses.filter(category=category)
+
+        for item in filtered_by_category:
+            amount += item.amount
+
+        return amount
+
+    for x in expenses:
+        for y in category_list:
+            summary[y] = get_expense_category_amount(y)
+
+    return JsonResponse({ 'expense_category_data': summary }, safe=False)
