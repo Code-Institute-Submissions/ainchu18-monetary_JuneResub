@@ -1,108 +1,260 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Monetary-v1
+---
+Develpoer: JKCC
 
-Welcome ainchu18,
+Monetary is an app users can use to monitor and keep track of their expenses, salary and savings. Users can add, edit and delete thei expenses, salary and savings accordingly. This app was develop to help users budget their allowances and money in general.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
-
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+[Go to the website](https://monetary-v1.herokuapp.com/)
 
 ---
 
-Happy coding!
+![App Image](media/expenses.png)
+
+---
+## Table of Contents
+---
+1. [Goals](#goals)
+    * [Users Goals](#user-goals)
+    * [Developer Goals](#owner-goals)
+2. [User Experience](#user-experience)
+    * [Target Crowd](#target-crowd)
+    * [User Requirements and Expectation](#user-requirements-expectation)
+    * [User Stories](#user-stories)
+    * [Site Owner Story](#site-owner)
+3. [Technologies Used](#technology)
+    * [Languages](#languages)
+    * [Frameworks and Tools](#frameworks)
+4. [Features](#features)
+    * [Sign up Page](#signup)
+    * [Login Page](#login)
+    * [Logout Page](#logout)
+    * [Expenses Home Page](#expenses-home)
+    * [Edit Expenses](#edit-expenses)
+    * [Add Expenses](#add-expenses)
+    * [Expenses Summary](#expenses-summary)
+    * [Salary Home Page](#salary-home)
+    * [Salary Summary](#salary-summary)
+    * [Saving Home Page](#saving-home)
+    * [Saving Summary](#saving-summary)
+    * [Csv Page](#csv)
+    * [Search](#search)
+5. [Validation](#validation)
+    * [PEP8 Validation](#pep)
+    * [HTML Validation](#html)
+    * [CSS Validation](#css)
+    * [Javascript Validation](#js)
+    * [User Stories Testing](#stories)
+    * [Site Owner Story Testing](#owner)
+6. [Bugs](#bugs)
+7. [Deployment](#deployment)
+8. [Credits](#credits)
+9. [Acknowledgement](#acknowledgement)
+
+---
+## Goals<a name=goals></a>
+### User Goals<a name=user-goals></a>
+* To be able to create an account, log in and log out with email verifications to ensure safety of account.
+* To be able to add, edit and delete expenses
+* To be able to add, edit and delete salary
+* To be able to add, edit and delete saving
+* To be able to view summary of expenses, salary and savings
+* To be able to download a csv file of expenses, salary and savings and print it out after.
+* To be able to search of certain expenses, salary and saving
+### Developer Goals<a name=owner-goals></a>
+* To be able to help others keep track of their money and make the world a better place.
+---
+
+## User Experience<a name=user-experience></a>
+
+---
+### Target Crowd<a name=target-crowd></a>
+* People who wants to keep track of their money and for people who wants to help them budget.
+
+### User Requirements and Expectations<a name=user-requirements-expectation></a>
+* Average level of knowledge about computers and online shopping.
+* Ability to input data.
+* Easy to use
+* Easily log in and out
+* Easily create an account.
+* Easily add, edit and delete expenses, salary and savings.
+
+### User/Shopper Stories<a name=user-stories></a>
+* To be able to create an account, log in and log out with email verifications to ensure safety of account.
+* To be able to add, edit and delete expenses
+* To be able to add, edit and delete salary
+* To be able to add, edit and delete saving
+* To be able to view summary of expenses, salary and savings
+* To be able to download a csv file of expenses, salary and savings and print it out after.
+* To be able to search of certain expenses, salary and saving
+### Site Owner Story<a name=site-owner></a>
+1. As the site owner, I want to be able to have an admin account so I can add, edit and delete categories, sources to make the site better accordingly.
+2. As the site owner, I want to be able to see all the users that has registered for an account and all the orders that has been done on the shop.
+
+---
+## Technologies Used<a name=technology></a>
+### Languages<a name=languages></a>
+* Python-Django
+* HTML
+* CSS
+* Javascript
+* Heroku-Postgres
+* Cloudinary
+
+### Framework and Tools<a name=frameworks></a>
+* Bootstrap5 - for the site design on desktop and mobile to be responsive.
+* Github - used for storing the code for the site in a repositoty so other developers can see, fork and check it out.
+* Gitpod - the IDE used when developing the site
+* Cloudinary - where all the static and media files are stored
+* Heroku - where the app is deployed
+---
+## Features
+### Website Pages
+The website is structured into pages, each with clear, concise structure, information and purpose. I use the Bootstrap grid system throughout, which gave a consistent structure and responsive design.
+1. Signup Page<a name=signup></a>: This is the signup page, where users can create an account. This uses a dashboard template with some changes from bootstrap5.
+![Sign up page Image](media/signup.png)
+2. Login<a name=login></a>: This page allows the user to login to the site
+![Sign in Image](media/signin.png)
+3. Logout<a name=logout></a>: This page allows the user to logout the site
+![Sign out Image](media/signout.png)
+4. Expenses Home Page<a name=expenses-home></a>: This page shows the expenses of the user.
+![Expenses home page Image](media/expenses.png)
+5. Edit Expenses Page<a name=edit-expenses></a>: This page where user can edit a certain expense.
+![Edit expense page Image](media/edit-expenses.png)
+6. Add Expenses page<a name=add-expenses></a>: This page is where users can add their expenses.
+![Add expenses page Image](media/add-expenses.png)
+7. Expenses Summary Page<a name=expenses-summary></a>: This page shows the expenses summary of the user.
+![Expenses Summary Image](media/expenses-summary.png)
+8. Salary Home Page<a name=salary-home></a>: This page shows the salaries of the user.
+![Salary home page Image](media/salary.png)
+9. Salary Summary Page<a name=salary-summary></a>: This page shows the salary summary of the user.
+![Salary Summary Image](media/salary-summary.png)
+10. Saving Home Page<a name=saving-home></a>: This page shows the saving of the user.
+![Saving home page Image](media/saving.png)
+11. Saving Summary Page<a name=saving-summary></a>: This page shows the saving summary of the user.
+![Saving Summary Image](media/saving-summary.png)
+
+Note: Add, edit salary and saving have the same template as the expenses feature.
+12. CSV Page<a name=csv></a>: This page shows the saving summary of the user.
+![CSV Page Image](media/csv.png)
+13. Search Page<a name=search></a>: This page shows the saving summary of the user.
+![Search Image](media/search.png)
+
+---
+## Validation<a name=validation></a>
+### PEP8 Validation<a name=pep></a>
+* http://pep8online.com/ was use to validate the python code written. Result came back with warnings of line of code too long. I am not sure how to fix them without ruining the site or it might not work if I edit it. Will try and learn how to do this in the future as for now, due to time constraints, I will leave it be as it is not affecting the overall performance of the site.
+On one hand, with regards to Unitest, I am still not sure how to do this so I wasnt able to include any of these in the code. Will learn about this more in the future when I have more time to focus on it.
+### HTML Validation<a name=html></a>
+* https://validator.w3.org/ was used to check the html files on this site. According to the site, there 1 error on this site and no warnings. The error was about an h6 not being allowed to be a child of a ul. Will try and fix this in the future as for now, I will leave it be as it is not affecting the overall function of the site.
+### CSS Validation<a name=css></a>
+* https://jigsaw.w3.org/css-validator/ was used to check all the CSS files on this site. There were no errors or warnings found.
+### JS Validation<a name=js></a>
+* https://jshint.com was used to check the Javascript files used in this site. There were warnings about template literal only available in ES6
+## User Stories Testing<a name=stories></a>
+1. To be able to create an account, log in and log out with email verifications to ensure safety of account.
+
+| Feature      | Action    | Result    |
+| :------------- | :----------: | -----------: |
+| Signin,Signout and register page | When you opened the app, it will ask the user to either log in or create an account if one doesnt have it.   | Worked    |
+
+Note: For some reason I think I made a mistake in deploying the site because only the superuser I created can only be the one to see the content of the site. There is a problem when a new user creates an account, after successfully creating an account, the new user will not be able to see the template of the site for expenses, salary and saving. I have an idea on where I went wrong but for lack of time, I wasnt able to fix it but will do so after this.
+
+2. To be able to add, edit and delete expenses
+
+| Feature      | Action    | Result    |
+| :------------- | :----------: | -----------: |
+| Add, edit and delete page | When you opened the app, and click on the add expenses button, users will be able to add a new expense, and when clicking edit, users can edit or delete the chosen expense. | Worked    |
+
+Note: For some reason I think I made a mistake in deploying the site because only the superuser I created can only be the one to see the content of the site. There is a problem when a new user creates an account, after successfully creating an account, the new user will not be able to see the template of the site for expenses, salary and saving. I have an idea on where I went wrong but for lack of time, I wasnt able to fix it but will do so after this. This feature is the same for the salary and saving page.
+
+3. To be able to view summary of expenses, salary and savings
+
+| Feature      | Action    | Result    |
+| :------------- | :----------: | -----------: |
+| Expenses, Salary, Saving Summary page | When you click on the sidebar option of expenses, salary, saving summary it will bring to the summary page where there is illustration showing all the expenses, salary and saving breakdown.  | Worked    |
+
+4. *  To be able to download a csv file of expenses, salary and savings and print it out after.
+
+| Feature      | Action    | Result    |
+| :------------- | :----------: | -----------: |
+| CSV page | When user clicked on the download as csv button, it will allow users to download the file and print it after either for expenses, salary or saving. | Worked    |
+
+5. To be able to search of certain expenses, salary and saving
+
+| Feature      | Action    | Result    |
+| :------------- | :----------: | -----------: |
+| Search page | When you enter key words or letters on the search bar, it will show all the expenses, salary or saving that has those letter or words on them. | Worked    |
+
+### Site Owner Story Testing<a name=owner></a>
+1. As the site owner, I want to be able to have an admin account so I can add, edit and delete categories, sources to make the site better accordingly.
+
+| Feature      | Action    | Result    |
+| :------------- | :----------: | -----------: |
+| Admin Page | When the site owner has a admin account access, he or she will be able to add, edit, delete products on the product management option or when logged in as a owner and validated superuser, all the items will have an edit or delete options on them.   | Worked    |
+
+2. As the site owner, I want to be able to see all the users that has registered for an account and all the orders that has been done on the shop.
+
+| Feature      | Action    | Result    |
+| :------------- | :----------: | -----------: |
+| Admin Page | This is possible when you add /admin to the website url, and enter your admin login. Tested using the superuser I made.   | Worked    |
+
+---
+## Bugs<a name=bugs></a>
+* Im not sure if its a bug or if I deployed it the wrong way or used the wrong static file storage, but for some reason everytime I create a new user, the registration will be successful but when logged in, the user cant see the expenses, salary or saving table. Due to lack of time and stress, I was only able to present and submit with the superuser account.
+
+---
+## Depolyment<a name=deployment></a>
+### The website was deployed using Heroku by following these steps:
+
+1. Use the "pip3 freeze > requirements.txt" command in the terminal to save any libraries that need to be installed in the file.
+2. Login or create a Heroku account
+3. Click the "new" button in the upper right corner and select "create new app".
+4. Choose an app name and your region and click "Create app".
+5. Go to the "settings" tab, add the python build pack and then the node.js build pack and add all the variables needed for the site.
+6. Go to the "deploy" tab and pick GitHub as a deployment method.
+7. Search for a repository to connect to
+8. Click enable automatic deploys and then deploy branch
+9. Wait for the app to build and then click on the "View" link.
+
+Note: There was a problem will heroku so I needed to deploy the site, on the gitpod terminal. 
+1. I logged in to my heroku account on the gitpod terminal using heroku login -i
+2. After logging into my account, I remotely connect to heroku with the following command to the terminal, heroku git:remote -a monetary-v1(the name of the app in heroku)
+3. Lastly, push the repository to heroku main and typing the following command on the gitpod terminal, git push heroku main
+
+### You can fork the repository by following these steps:
+
+1. Go to the GitHub repository.
+2. Click on the Fork button in the upper right-hand corner.
+
+### You can clone the repository by following these steps:
+
+1. Go to the GitHub repository
+2. Locate the Code button above the list of files and click it
+3. Select if you prefer to clone using HTTPS, SSH, or Github CLI and click the copy button to copy the URL to your clipboard.
+4. Open Git Bash
+5. Change the current working directory to the one where you want the cloned directory.
+6. Type git clone and paste the URL from the clipboard ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY)
+7. Press Enter to create your local clone.
+
+---
+## Credits<a name=credits></a>
+* Making this app was inspired by me not able to budget and keep track of my money properly.
+### Code
+* The codes were based and modified from youtube tutorials and stackoverflow as well as the dashboard template from bootstrap.
+* Django documentations
+* Chart JS documentations
+* Bootsrap5 Examples
+### Overall UI
+* This was inspired by the dashboard template in bootstrap with some modifications.
+
+---
+## Acknoledgements<a name=acknowledgement></a>
+### I would like to take this opportunity to thank:
+* Code institute for the tutorial on how python-django works.
+* Google
+* Youtube
+* Lastly, I would like to thank JK, you know who you are. Thanks for the advice, for cheering me up when I'm stressed out and thank you for your belief in me that I can do this course and succeed.
+
+## Notice and Plans for the Future
+There are still plenty of things to be improved on this site. Due to lack of time and unforseen circumstances, I would like to apologize for this project for it not being up to the best standard. Will do my best in the future to improve and fix this.
+There are things that I want to add onto this site that might improve the overall experience of users. First, is to add a profile management where users can edit their profiles. Second, is to add like a currency option so user from all over the world can choose whats is appropriate for them. I did my best to do this site eventhough there are more things to improve. Lastly, incorporate proper responsiveness on the charts on mobile view. Would gladly appreciate any suggestions to improve this site. Thanks and Happy Easter!
