@@ -2,31 +2,31 @@
 {% load static %}
 
 {% block content %}
-{% if expenses.count %}
+{% if salary.count %}
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h2">Dashboard</h1>
     <div class="btn-toolbar mb-2 mb-md-0">
-        <a href="{% url 'export-csv' %}" class="btn btn-outline-secondary btn-sm">Download as CSV</a>
+        <a href="{% url 'salary-csv' %}" class="btn btn-outline-secondary btn-sm">Download as CSV</a>
     </div>
 </div>
 
-<h2>My Expenses</h2>
+<h2>My Salaries</h2>
 <div class="row">
     <div class="col-md-4">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{% url 'expenses' %}">Expenses</a></li>
-                <li class="breadcrumb-item active" aria-current="page">My Expenses</li>
+                <li class="breadcrumb-item"><a href="{% url 'salary' %}">Salaries</a></li>
+                <li class="breadcrumb-item active" aria-current="page">My Salaries</li>
             </ol>
         </nav>
     </div>
     <div class="col-md-4">
         <div class="form-group">
-            <input type="text" class="form-control mb-3" id="searchField" placeholder="Search Expense">
+            <input type="text" class="form-control mb-3" id="searchField" placeholder="Search Salary">
         </div>
     </div>
     <div class="col-md-4">
-        <a href="{% url 'add-expenses' %}" class="btn btn-outline-primary btn-sm mb-3 float-end">Add Expense</a>
+        <a href="{% url 'add-salary' %}" class="btn btn-outline-primary btn-sm mb-3 float-end">Add Salary</a>
     </div>
 </div>
 
@@ -36,19 +36,19 @@
             <tr>
                 <th>Amount</th>
                 <th>Description</th>
-                <th>Category</th>
-                <th>Expense Date</th>
+                <th>Source</th>
+                <th>Salary Date</th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
-            {% for expense in page_obj %}
+            {% for salary in page_obj %}
             <tr>
-                <td>{{expense.amount}}</td>
-                <td>{{expense.description}}</td>
-                <td>{{expense.category}}</td>
-                <td>{{expense.date}}</td>
-                <td><a href="{% url 'expense-edit' expense.id %}" class="btn btn-outline-secondary btn-sm">Edit</a></td>
+                <td>{{salary.amount}}</td>
+                <td>{{salary.description}}</td>
+                <td>{{salary.source}}</td>
+                <td>{{salary.date}}</td>
+                <td><a href="{% url 'salary-edit' salary.id %}" class="btn btn-outline-secondary btn-sm">Edit</a></td>
             </tr>
             {% endfor %}
         </tbody>
@@ -63,8 +63,8 @@
             <tr>
                 <th>Amount</th>
                 <th>Description</th>
-                <th>Category</th>
-                <th>Expense Date</th>
+                <th>Source</th>
+                <th>Salary Date</th>
                 <th></th>
             </tr>
         </thead>
@@ -81,10 +81,9 @@
         Showing page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
         <ul class="pagination align-right float-end mr-auto">
             {% if page_obj.has_previous %}
-            <li {% if page_obj == 1 %} class="page-item active" {% endif %}><a class="page-link"
-                    href="?page=1">&laquo; 1</a></li>
-            <li class="page-item"><a class="page-link"
-                    href="?page={{ page_obj.previous_page_number }}">Previous</a>
+            <li {% if page_obj == 1 %} class="page-item active" {% endif %}><a class="page-link" href="?page=1">&laquo;
+                    1</a></li>
+            <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a>
             </li>
             {% endif %}
 
@@ -99,10 +98,9 @@
     </div>
 </div>
 {% endif %}
-
 {% endblock %}
 
 {% block postload_js %}
 {{ block.super }}
-<script src="{% static 'expenses/js/searchExpense.js' %}"></script>
+<script src="{% static 'js/searchSalary.js' %}"></script>
 {% endblock %}
