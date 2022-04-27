@@ -148,3 +148,7 @@ def salary_csv(request):
         writer.writerow([salary.amount, salary.source, salary.description, salary.date])
 
     return response
+
+
+def salary_stats_view(request):
+    return render(request, 'salary/salary-stat.html')
