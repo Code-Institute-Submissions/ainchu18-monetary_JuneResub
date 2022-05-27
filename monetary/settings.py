@@ -95,7 +95,7 @@ TEMPLATES = [
 
 SITE_ID = 1
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/expenses'
 LOGOUT_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'monetary.wsgi.application'
