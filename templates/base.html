@@ -21,7 +21,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
         integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous">
     </script>
-    
+
     <title>Monetary</title>
 
 </head>
@@ -96,19 +96,19 @@
                     </h6>
                     <ul class="nav flex-column mb-2">
                         {% if user.is_authenticated %}
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="#">{{ request.user.username }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">{{ request.user.username }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                        </li>
                         {% else %}
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                        </li>
                         {% endif %}
                     </ul>
                 </div>
@@ -117,18 +117,43 @@
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 {% include 'partials/messages.html' %}
                 {% block content %}
-                
+
 
                 {% endblock %}
             </main>
         </div>
     </div>
+    <!--Footer-->
+    <footer class="bg-light text-lg-start">
+        <hr class="m-0" />
+
+        <div class="text-center py-4 align-items-center">
+            <p>Follow us on our social media</p>
+            <a href="https://www.youtube.com/" class="btn btn-sm btn-pink m-1"
+                role="button" rel="noopener" target="_blank">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.facebook.com/" class="btn btn-sm btn-pink m-1"
+                role="button" rel="noopener" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com/" class="btn btn-sm btn-pink m-1" role="button"
+                rel="noopener" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center align-items-center p-2" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright: JKCC1830
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!--Footer-->
 
     {% block postload_js %}
 
     {% endblock %}
-
-
 </body>
 
 </html>
