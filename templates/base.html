@@ -110,17 +110,7 @@
                             <a class="nav-link" href="{% url 'account_login' %}">Login</a>
                         </li>
                         {% endif %}
-                    </ul>
-                    <!--Footer-->
-                    <footer>
-                        <hr class="m-0" />
-                        <!-- Copyright -->
-                        <div class="text-center align-items-center p-2" style="background-color: rgba(0, 0, 0, 0.2);">
-                            © 2022 Copyright: JKCC1830
-                        </div>
-                        <!-- Copyright -->
-                    </footer>
-                    <!--Footer-->
+                    </ul>   
                 </div>
             </nav>
 
@@ -130,6 +120,7 @@
 
 
                 {% endblock %}
+                {% include 'includes/footer.html' %}
             </main>
         </div>
 
