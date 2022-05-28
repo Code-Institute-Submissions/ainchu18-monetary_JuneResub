@@ -11,6 +11,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -42,23 +43,23 @@
                     <ul class="nav flex-column">
                         <h6
                             class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                            <span>Dashboard</span>
+                            <span><i class='bx bxs-home'></i> Dashboard</span>
                         </h6>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'expenses' %}">
-                                <span></span>
+                                <span><i class='bx bx-money'></i></span>
                                 Expenses
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'salary' %}">
-                                <span></span>
+                                <span><i class='bx bx-credit-card-front'></i></span>
                                 Salary
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'saving' %}">
-                                <span></span>
+                                <span><i class='bx bxs-bank'></i></span>
                                 Savings
                             </a>
                         </li>
@@ -71,19 +72,19 @@
                     <ul class="nav flex-column mb-2">
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'stats' %}">
-                                <span></span>
+                                <span><i class='bx bx-bar-chart'></i></span>
                                 Expenses Summary
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'salary-stats' %}">
-                                <span></span>
+                                <span><i class='bx bxs-bar-chart-alt-2'></i></span>
                                 Salary Summary
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'saving-stats' %}">
-                                <span></span>
+                                <span><i class='bx bx-bar-chart-alt'></i></span>
                                 Savings Summary
                             </a>
                         </li>
@@ -91,7 +92,7 @@
 
                     <h6
                         class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                        <span>My Account</span>
+                        <span><i class='bx bxs-user-circle'></i> My Account</span>
                     </h6>
                     <ul class="nav flex-column mb-2">
                         {% if user.is_authenticated %}
