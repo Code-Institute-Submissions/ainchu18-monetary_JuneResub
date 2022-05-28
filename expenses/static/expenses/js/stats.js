@@ -31,7 +31,7 @@ const renderChart = (data, labels) => {
       options: {
         title: {
           display: true,
-          text: "Expenses per category",
+          text: "Expenses per category in the last 3 months",
         }
       },
     });

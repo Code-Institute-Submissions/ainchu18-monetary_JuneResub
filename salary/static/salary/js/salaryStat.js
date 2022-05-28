@@ -31,7 +31,7 @@ const renderSalaryChart = (data, labels) => {
       options: {
         title: {
           display: true,
-          text: "Salary per source",
+          text: "Salary per source in the last 3 months",
         }
       },
     });

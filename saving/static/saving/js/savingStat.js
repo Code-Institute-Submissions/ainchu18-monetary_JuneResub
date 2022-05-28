@@ -31,7 +31,7 @@ const renderSavingChart = (data, labels) => {
       options: {
         title: {
           display: true,
-          text: "Savings per source",
+          text: "Savings per source in the last 3 months",
         }
       },
     });
