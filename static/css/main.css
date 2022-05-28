@@ -2,12 +2,6 @@ body {
     font-size: .875rem;
 }
 
-.feather {
-    width: 16px;
-    height: 16px;
-    vertical-align: text-bottom;
-}
-
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
@@ -114,4 +108,11 @@ body {
 .form-control-dark:focus {
     border-color: transparent;
     box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
 }
