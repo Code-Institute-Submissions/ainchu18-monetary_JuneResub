@@ -79,6 +79,7 @@ Monetary is an app users can use to monitor and keep track of their expenses, sa
 * Easily add, edit and delete expenses, salary and savings.
 
 ### User/Shopper Stories<a name=user-stories></a>
+Note: User stories are mapped out using the github projects section and made an issue template to easily mapped out the stories. This might not be coinciding on when I finished the portion of the user story, because I just added it as per assessors comment. And to let you know I know how to use it but I didnt have time to do it so I just wrote it down on paper and checked them as I finished that portion of the user story. But I supposed its an important part so rest assured that I will use this agile tool to map out my users stories in my future projects.
 * To be able to create an account, log in and log out with email verifications to ensure safety of account.
 * To be able to add, edit and delete expenses
 * To be able to add, edit and delete salary
@@ -103,9 +104,19 @@ Monetary is an app users can use to monitor and keep track of their expenses, sa
 ### Framework and Tools<a name=frameworks></a>
 * Bootstrap5 - for the site design on desktop and mobile to be responsive.
 * Github - used for storing the code for the site in a repositoty so other developers can see, fork and check it out.
+* Basic kanban to map out user stories with issue templates
 * Gitpod - the IDE used when developing the site
 * Cloudinary - where all the static and media files are stored
 * Heroku - where the app is deployed
+* draw.io - for technical design and wireframes for the website
+
+### Techincal Design and Layout
+Note: draw.io was used to draw up the technical design, wireframes and layout for the site.
+
+![Design and Layout](media/technical-design.png)
+![Design and Layout](media/login-wireframe-design.png)
+![Design and Layout](media/page-design-wireframe.png)
+![Design and Layout](media/summary-wireframe.png)
 ---
 ## Features
 ### Website Pages
@@ -200,7 +211,8 @@ Note: For some reason I think I made a mistake in deploying the site because onl
 
 ---
 ## Bugs<a name=bugs></a>
-* Im not sure if its a bug or if I deployed it the wrong way or used the wrong static file storage, but for some reason everytime I create a new user, the registration will be successful but when logged in, the user cant see the expenses, salary or saving table. Due to lack of time and stress, I was only able to present and submit with the superuser account.
+* Im not sure if its a bug or if I deployed it the wrong way or used the wrong static file storage, but for some reason everytime I create a new user, the registration will be successful but when logged in, the user cant see the expenses, salary or saving table. Due to lack of time and stress, I was only able to present and submit with the superuser account. 
+* Was able to fix this issue above when I checked the code. Now its working properly.
 
 ---
 ## Depolyment<a name=deployment></a>
@@ -253,8 +265,9 @@ Note: There was a problem will heroku so I needed to deploy the site, on the git
 * Code institute for the tutorial on how python-django works.
 * Google
 * Youtube
+* boxicons.com - for the icons on the site
 * Lastly, I would like to thank JK, you know who you are. Thanks for the advice, for cheering me up when I'm stressed out and thank you for your belief in me that I can do this course and succeed.
 
 ## Notice and Plans for the Future
-This version was based on the last project I submitted on my PP4 thus there are less commits on this project as it is a resubmission. After I finished doing my PP5, I was able to learn new things which I incorporated in this resubmission project for PP4. But there are still plenty of things to be improved on this site. Due to lack of time and unforseen circumstances, I would like to apologize for this project for it not being up to the best standard. Will do my best in the future to improve and fix this.
-There are things that I want to add onto this site that might improve the overall experience of users. First, is to add a profile management where users can edit their profiles. Second, is to add like a currency option so user from all over the world can choose whats is appropriate for them. I did my best to do this site eventhough there are more things to improve. Lastly, incorporate proper responsiveness on the charts on mobile view. Would gladly appreciate any suggestions to improve this site. Thanks and Happy Easter!
+This was based on the last project I submitted on my PP4 thus there are less commits on this project as it is a resubmission. I just added some extra touch to make user experience better and some more documentation to support it.
+There are things that I want to add onto this site that might improve the overall experience of users. First, is to add a profile management where users can edit their profiles. Second, is to add like a currency option so user from all over the world can choose whats is appropriate for them. I did my best to do this site eventhough there are more things to improve.
