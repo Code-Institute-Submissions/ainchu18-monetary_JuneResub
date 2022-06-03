@@ -147,9 +147,9 @@ The website is structured into pages, each with clear, concise structure, inform
 
 Note: Add, edit, delete salary and saving have the same template as the expenses feature.
 
-12. CSV Page<a name=csv></a>: This page shows the saving summary of the user.
+12. CSV Page<a name=csv></a>: This page is where users can click the button and download either their expenses, savings or salaries as CSV file to be opened via MS Excel and can be printed if needed.
 ![CSV Page Image](media/csv.png)
-13. Search Page<a name=search></a>: This page shows the saving summary of the user.
+13. Search Page<a name=search></a>: This page shows when the user search for a specific expense, saving or salary for the users to easily edit or delete it.
 ![Search Image](media/search.png)
 
 ---
