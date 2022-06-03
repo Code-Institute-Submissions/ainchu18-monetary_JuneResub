@@ -134,15 +134,15 @@ The website is structured into pages, each with clear, concise structure, inform
 ![Edit expense page Image](media/edit-expenses.png)
 6. Add Expenses page<a name=add-expenses></a>: This page is where users can add their expenses.
 ![Add expenses page Image](media/add-expenses.png)
-7. Expenses Summary Page<a name=expenses-summary></a>: This page shows the expenses summary of the user.
+7. Expenses Summary Page<a name=expenses-summary></a>: This page shows the expenses summary for the past 3 months of the user.
 ![Expenses Summary Image](media/expenses-summary.png)
 8. Salary Home Page<a name=salary-home></a>: This page shows the salaries of the user.
 ![Salary home page Image](media/salary.png)
-9. Salary Summary Page<a name=salary-summary></a>: This page shows the salary summary of the user.
+9. Salary Summary Page<a name=salary-summary></a>: This page shows the salary summary for the past 3 months of the user.
 ![Salary Summary Image](media/salary-summary.png)
-10. Saving Home Page<a name=saving-home></a>: This page shows the saving of the user.
+10. Saving Home Page<a name=saving-home></a>: This page shows the savings of the user.
 ![Saving home page Image](media/savings.png)
-11. Saving Summary Page<a name=saving-summary></a>: This page shows the saving summary of the user.
+11. Saving Summary Page<a name=saving-summary></a>: This page shows the saving summary for the past 3 months of the user.
 ![Saving Summary Image](media/savings-summary.png)
 
 Note: Add, edit, delete salary and saving have the same template as the expenses feature.
