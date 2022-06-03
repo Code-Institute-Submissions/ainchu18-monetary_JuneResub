@@ -67,11 +67,11 @@
                         </li>
                     </ul>
 
-                    <h6
-                        class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                        <span>Summary</span>
-                    </h6>
                     <ul class="nav flex-column mb-2">
+                        <h6
+                            class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                            <span>Summary</span>
+                        </h6>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'stats' %}">
                                 <span><i class='bx bx-bar-chart'></i></span>
@@ -92,11 +92,11 @@
                         </li>
                     </ul>
 
-                    <h6
-                        class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                        <span><i class='bx bxs-user-circle'></i> My Account</span>
-                    </h6>
                     <ul class="nav flex-column mb-2">
+                        <h6
+                            class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                            <span><i class='bx bxs-user-circle'></i> My Account</span>
+                        </h6>
                         {% if user.is_authenticated %}
                         <li class="nav-item">
                             <a class="nav-link disabled" href="#">{{ request.user.username }}</a>
@@ -112,7 +112,7 @@
                             <a class="nav-link" href="{% url 'account_login' %}">Login</a>
                         </li>
                         {% endif %}
-                    </ul>   
+                    </ul>
                 </div>
             </nav>
 
@@ -120,14 +120,16 @@
                 {% include 'partials/messages.html' %}
                 {% block content %}
 
-                
-                {% endblock %}    
+
+                {% endblock %}
             </main>
         </div>
 
     </div>
     <footer>
-        <p>&copy; Copyright <script>document.write(new Date().getFullYear());</script>: Jkcc1830</p>
+        <p>&copy; Copyright <script>
+                document.write(new Date().getFullYear());
+            </script>: Jkcc1830</p>
     </footer>
     {% block postload_js %}
 

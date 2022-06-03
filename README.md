@@ -162,6 +162,11 @@ On one hand, with regards to Unitest, I am still not sure how to do this so I wa
 * https://jigsaw.w3.org/css-validator/ was used to check all the CSS files on this site. There were no errors or warnings found.
 ### JS Validation<a name=js></a>
 * https://jshint.com was used to check the Javascript files used in this site. There were warnings about template literal only available in ES6
+
+## Lighthouse - Google
+* Lighthouse is an open-source, automated tool for improving the quality of web pages. You can run it against any web page, public or requiring authentication. It has audits for performance, accessibility, progressive web apps, SEO. This was used to check the sites performance.
+![Lighthouse Image](media/lighthouse.png)
+
 ## User Stories Testing<a name=stories></a>
 1. To be able to create an account, log in and log out with email verifications to ensure safety of account.
 
