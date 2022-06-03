@@ -145,7 +145,8 @@ The website is structured into pages, each with clear, concise structure, inform
 11. Saving Summary Page<a name=saving-summary></a>: This page shows the saving summary of the user.
 ![Saving Summary Image](media/savings-summary.png)
 
-Note: Add, edit salary and saving have the same template as the expenses feature.
+Note: Add, edit, delete salary and saving have the same template as the expenses feature.
+
 12. CSV Page<a name=csv></a>: This page shows the saving summary of the user.
 ![CSV Page Image](media/csv.png)
 13. Search Page<a name=search></a>: This page shows the saving summary of the user.
