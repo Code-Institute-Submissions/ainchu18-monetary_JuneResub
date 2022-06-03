@@ -112,7 +112,7 @@ Note: User stories are mapped out using the github projects section and made an 
 * https://favicon.io/favicon-converter/ - used to convert boxicons to favicon for the browser tab icon
 
 ### Techincal Design and Layout
-Note: draw.io was used to draw up the technical design, wireframes and layout for the site. The idea was rooted by the fact that the developer is having problems monitoring or keeping track of his money that is why this site/app was made. The developer decided to share it with others sothat others can use it to login/out, register for an account to add, edit or delete expenses, salaries and savings to help them budget or keep track/monitor their money if they have the same problem with the developer. Thus, this site was made.
+Note: draw.io was used to draw up the technical design, wireframes and layout for the site. The idea was rooted by the fact that the developer is having problems monitoring or keeping track of his money that is why this site/app was made. The developer decided to share it with others sothat others can use it to login/out, register for an account to add, edit or delete expenses, salaries and savings to help them budget or keep track/monitor their money if they have the same problem with the developer. Thus, this site was made. On one hand, color schemes depended on alert/messages colors in bootstrap just to make it simple and easy to understand by users. Lastly, the typography used was from google fonts Lato as it is eye pleasing, simple and easy to read.
 
 ![Design and Layout](media/technical-design.png)
 ![Design and Layout](media/login-wireframe-design.png)
