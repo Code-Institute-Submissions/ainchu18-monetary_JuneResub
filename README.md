@@ -123,11 +123,11 @@ Note: draw.io was used to draw up the technical design, wireframes and layout fo
 ### Website Pages
 The website is structured into pages, each with clear, concise structure, information and purpose. I use the Bootstrap grid system throughout, which gave a consistent structure and responsive design.
 1. Signup Page<a name=signup></a>: This is the signup page, where users can create an account. This uses a dashboard template with some changes from bootstrap5.
-![Sign up page Image](media/signup.png)
+![Sign up page Image](media/register.png)
 2. Login<a name=login></a>: This page allows the user to login to the site
-![Sign in Image](media/signin.png)
+![Sign in Image](media/login.png)
 3. Logout<a name=logout></a>: This page allows the user to logout the site
-![Sign out Image](media/signout.png)
+![Sign out Image](media/logout.png)
 4. Expenses Home Page<a name=expenses-home></a>: This page shows the expenses of the user.
 ![Expenses home page Image](media/expenses.png)
 5. Edit Expenses Page<a name=edit-expenses></a>: This page where user can edit a certain expense.
@@ -141,9 +141,9 @@ The website is structured into pages, each with clear, concise structure, inform
 9. Salary Summary Page<a name=salary-summary></a>: This page shows the salary summary of the user.
 ![Salary Summary Image](media/salary-summary.png)
 10. Saving Home Page<a name=saving-home></a>: This page shows the saving of the user.
-![Saving home page Image](media/saving.png)
+![Saving home page Image](media/savings.png)
 11. Saving Summary Page<a name=saving-summary></a>: This page shows the saving summary of the user.
-![Saving Summary Image](media/saving-summary.png)
+![Saving Summary Image](media/savings-summary.png)
 
 Note: Add, edit salary and saving have the same template as the expenses feature.
 12. CSV Page<a name=csv></a>: This page shows the saving summary of the user.
