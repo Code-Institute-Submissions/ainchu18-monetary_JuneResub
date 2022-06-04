@@ -78,7 +78,7 @@ Monetary is an app users can use to monitor and keep track of their expenses, sa
 * Easily create an account.
 * Easily add, edit and delete expenses, salary and savings.
 
-### User/Shopper Stories<a name=user-stories></a>
+### User Stories<a name=user-stories></a>
 Note: User stories are mapped out using the github projects section and made an issue template to easily mapped out the stories. This might not be coinciding on when I finished the portion of the user story, because I just added it as per assessors comment. And to let you know I know how to use it but I didnt have time to do it so I just wrote it down on paper and checked them as I finished that portion of the user story. But I supposed its an important part so rest assured that I will use this agile tool to map out my users stories in my future projects.
 * To be able to create an account, log in and log out with email verifications to ensure safety of account.
 * To be able to add, edit and delete expenses
@@ -112,6 +112,7 @@ Note: User stories are mapped out using the github projects section and made an 
 * https://favicon.io/favicon-converter/ - used to convert boxicons to favicon for the browser tab icon
 
 ### Techincal Design and Layout
+
 Note: draw.io was used to draw up the technical design, wireframes and layout for the site. The idea was rooted by the fact that the developer is having problems monitoring or keeping track of his money that is why this site/app was made. The developer decided to share it with others sothat others can use it to login/out, register for an account to add, edit or delete expenses, salaries and savings to help them budget or keep track/monitor their money if they have the same problem with the developer. Thus, this site was made. On one hand, color schemes depended on alert/messages colors in bootstrap just to make it simple and easy to understand by users. Lastly, the typography used was from google fonts Lato as it is eye pleasing, simple and easy to read.
 
 ![Design and Layout](media/technical-design.png)
@@ -120,8 +121,11 @@ Note: draw.io was used to draw up the technical design, wireframes and layout fo
 ![Design and Layout](media/summary-wireframe.png)
 ---
 ## Features
+
 ### Website Pages
+
 The website is structured into pages, each with clear, concise structure, information and purpose. I use the Bootstrap grid system throughout, which gave a consistent structure and responsive design.
+
 1. Signup Page<a name=signup></a>: This is the signup page, where users can create an account. This uses a dashboard template with some changes from bootstrap5.
 ![Sign up page Image](media/register.png)
 2. Login<a name=login></a>: This page allows the user to login to the site
@@ -154,21 +158,31 @@ Note: Add, edit, delete salary and saving have the same template as the expenses
 
 ---
 ## Validation<a name=validation></a>
+
 ### PEP8 Validation<a name=pep></a>
+
 * http://pep8online.com/ was use to validate the python code written. Result came back with warnings of line of code too long. I am not sure how to fix them without ruining the site or it might not work if I edit it. Will try and learn how to do this in the future as for now, due to time constraints, I will leave it be as it is not affecting the overall performance of the site.
 On one hand, with regards to Unitest, I am still not sure how to do this so I wasnt able to include any of these in the code. Will learn about this more in the future when I have more time to focus on it.
+
 ### HTML Validation<a name=html></a>
+
 * https://validator.w3.org/ was used to check the html files on this site. According to the site, there 1 error on this site and no warnings. The error was about an h6 not being allowed to be a child of a ul. Will try and fix this in the future as for now, I will leave it be as it is not affecting the overall function of the site.
+
 ### CSS Validation<a name=css></a>
+
 * https://jigsaw.w3.org/css-validator/ was used to check all the CSS files on this site. There were no errors or warnings found.
+
 ### JS Validation<a name=js></a>
+
 * https://jshint.com was used to check the Javascript files used in this site. There were warnings about template literal only available in ES6
 
 ## Lighthouse - Google
+
 * Lighthouse is an open-source, automated tool for improving the quality of web pages. You can run it against any web page, public or requiring authentication. It has audits for performance, accessibility, progressive web apps, SEO. This was used to check the sites performance.
 ![Lighthouse Image](media/lighthouse.png)
 
 ## User Stories Testing<a name=stories></a>
+
 1. To be able to create an account, log in and log out with email verifications to ensure safety of account.
 
 | Feature      | Action    | Result    |
@@ -204,6 +218,7 @@ Note: For some reason I think I made a mistake in deploying the site because onl
 | Search page | When you enter key words or letters on the search bar, it will show all the expenses, salary or saving that has those letter or words on them. | Worked    |
 
 ### Site Owner Story Testing<a name=owner></a>
+
 1. As the site owner, I want to be able to have an admin account so I can add, edit and delete categories, sources to make the site better accordingly.
 
 | Feature      | Action    | Result    |
@@ -218,11 +233,13 @@ Note: For some reason I think I made a mistake in deploying the site because onl
 
 ---
 ## Bugs<a name=bugs></a>
+
 * Im not sure if its a bug or if I deployed it the wrong way or used the wrong static file storage, but for some reason everytime I create a new user, the registration will be successful but when logged in, the user cant see the expenses, salary or saving table. Due to lack of time and stress, I was only able to present and submit with the superuser account. 
-* Was able to fix this issue above when I checked the code. Now its working properly.
+* Update: I was able to find the problem in the code and fixed this issue above. Now the site is working properly.
 
 ---
 ## Depolyment<a name=deployment></a>
+
 ### The website was deployed using Heroku by following these steps:
 
 1. Use the "pip3 freeze > requirements.txt" command in the terminal to save any libraries that need to be installed in the file.
@@ -235,7 +252,8 @@ Note: For some reason I think I made a mistake in deploying the site because onl
 8. Click enable automatic deploys and then deploy branch
 9. Wait for the app to build and then click on the "View" link.
 
-Note: There was a problem will heroku so I needed to deploy the site, on the gitpod terminal. 
+Note: There was a problem will heroku so I needed to deploy the site, on the gitpod terminal.
+
 1. I logged in to my heroku account on the gitpod terminal using heroku login -i
 2. After logging into my account, I remotely connect to heroku with the following command to the terminal, heroku git:remote -a monetary-v1(the name of the app in heroku)
 3. Lastly, push the repository to heroku main and typing the following command on the gitpod terminal, git push heroku main
@@ -257,18 +275,25 @@ Note: There was a problem will heroku so I needed to deploy the site, on the git
 
 ---
 ## Credits<a name=credits></a>
-* Making this app was inspired by me not able to budget and keep track of my money properly.
+
+Making this app was inspired by me not able to budget and keep track of my money properly and I want to help others too who have problems with same.
+
 ### Code
+
 * The codes were based and modified from youtube tutorials and stackoverflow as well as the dashboard template from bootstrap.
 * Django documentations
 * Chart JS documentations
 * Bootsrap5 Examples
+
 ### Overall UI
-* This was inspired by the dashboard template in bootstrap with some modifications.
+
+* This was inspired by the dashboard template in bootstrap with modifications.
 
 ---
 ## Acknoledgements<a name=acknowledgement></a>
+
 ### I would like to take this opportunity to thank:
+
 * Code institute for the tutorial on how python-django works.
 * Google
 * Youtube
