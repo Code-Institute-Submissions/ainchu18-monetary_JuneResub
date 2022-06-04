@@ -69,7 +69,7 @@
 
                     <h6
                         class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                        <span>Summary</span>
+                        <span><i class='bx bxs-doughnut-chart'></i> Summary</span>
                     </h6>
                     <ul class="nav flex-column mb-2">
                         <li class="nav-item">
@@ -102,7 +102,10 @@
                                 <a class="nav-link disabled" href="#">{{ request.user.username }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                                <a class="nav-link" href="{% url 'account_logout' %}">
+                                    <span><i class='bx bxs-door-open'></i></span>
+                                    Logout
+                                </a>
                             </li>
                         {% else %}
                             <li class="nav-item">
